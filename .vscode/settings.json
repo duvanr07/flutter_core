@@ -1,3 +1,30 @@
 {
-    "dart.flutterSdkPath": "/Users/duvan/Programacion/flutter/magneto_app/.fvm/versions/3.44.2"
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "dart.lineLength": 80,
+  "files.associations": {
+    "Fastfile": "ruby",
+    "bitrise.yml": "plaintext"
+  },
+  "search.exclude": {
+    "**/.fvm": true,
+    "**/.dart_tool": true,
+    "**/build": true,
+    "**/*.g.dart": true,
+    "lib/l10n/gen/**": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true,
+    "**/.dart_tool": true,
+    "**/build": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.rulers": [80],
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  }
 }
