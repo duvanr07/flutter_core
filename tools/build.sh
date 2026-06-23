@@ -9,8 +9,6 @@ set -e
 #   ./build.sh staging
 #   ./build.sh production --android-only
 #   ./build.sh staging --ios-only
-#
-# Writes build/deploy-manifest.env for release.sh to consume later.
 ###############################################################################
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -66,7 +64,10 @@ if [ "$BUILD_IOS" = true ]; then
   BUILT_IOS=true
 fi
 
-write_build_manifest
-
 echo "✅ Build completed for environment: $ENV"
-echo "   Next step: ./release.sh $ENV"
+if [ "$BUILT_ANDROID" = true ]; then
+  echo "   Android APK: $ANDROID_APK_LOCAL"
+fi
+if [ "$BUILT_IOS" = true ]; then
+  echo "   iOS IPA: $IOS_IPA_LOCAL"
+fi

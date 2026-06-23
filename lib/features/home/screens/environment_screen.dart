@@ -20,7 +20,7 @@ class EnvironmentScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Magneto Environment Status'),
+        title: const Text('Environment Status'),
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
         elevation: 2,
